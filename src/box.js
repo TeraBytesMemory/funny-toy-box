@@ -62,6 +62,17 @@
         }
     };
 
+    module.prototype.init = function() {
+        for (var i=0, len=this.ary.length; i<len; i++) {
+            for(var j = 0; j < this.ary[i].length; j++) {
+                if (this.ary[i][j].toy) {
+                    this.ary[i][j].toy = null;
+                }
+            }
+        }
+        $(".toy").remove();
+    };
+
     module.prototype.findOverlapGrid = function(toy) {
         var grid = []
         for (var i=0, len=this.ary.length; i<len; i++) {

@@ -20,4 +20,6 @@
     new Toy(1, 1, "./img/1x1_B.png", 1, "").rendar();
     new Toy(1, 1, "./img/1x1_G.png", 2, "").rendar();
     new Toy(1, 4, "./img/1x4_G.png", 2, "").rendar();
+
+    new Toy(2, 3, "./img/2x3_R.png", 3, "").rendar(box, 3, 1);
 })();

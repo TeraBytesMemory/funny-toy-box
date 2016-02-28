@@ -32,10 +32,10 @@
         this.deg = 0;
     };
 
-    module.prototype.rendar = function () {
+    module.prototype.rendar = function (box, x, y) {
         var self = this;
 
-        var dom = $("<div class='toy'></div>")
+        this.$dom = $("<div class='toy'></div>")
                 .height(75 * this.y)
                 .width(75 * this.x)
                 .draggable({
@@ -44,7 +44,7 @@
         var img = $("<img>")
                 .attr("src", this.image);
 
-        dom.on("click", function() {
+        this.$dom.on("click", function() {
             var h = $(this).height();
             var w = $(this).width();
 
@@ -56,11 +56,23 @@
 
         });
 
-        dom.data("toy-obj", this);
-        console.log(dom.data("toy-obj"));
+        this.$dom.data("toy-obj", this);
+        console.log(this.$dom.data("toy-obj"));
 
-        dom.append(img);
-        $(".toy-factory").append(dom);
+        this.$dom.append(img);
+        $(".toy-factory").append(this.$dom);
+
+
+        if (box && x && y) {
+            var offset = $(".box").offset();
+
+            this.$dom.css("position", "absolute");
+            this.$dom.css("left", offset.left + x * 75);
+            this.$dom.css("top", offset.top + y * 75);
+
+            box.findOverlapGrid(this.$dom);
+        }
+
     };
 
     return module;
