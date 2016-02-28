@@ -1,0 +1,60 @@
+.toy {
+  margine: 0;
+  padding: 0;
+}
+/*
+.toy:after {
+  content: "↷";
+  color: black;
+  size: 32px;
+
+  position: absolute;
+  right:0;
+}
+*/
+
+.box-grid {
+  margine: 0;
+  padding: 0;
+  width:73px;
+  height:73px;
+  min-height:73px;
+  border: solid 1px;
+
+  display: table-cell;
+}
+
+.grid-line {
+  margine: 0;
+  padding: 0;
+  width:600px;
+  height:75px;
+  min-height:75px;
+
+  display: table;
+}
+
+.box {
+  margine: 0;
+  margine-right: 12px;
+
+  padding: 0;
+  width:600px;
+  height:450px;
+  min-height:450px;
+
+  display: table-cell;
+}
+
+.game {
+  margin-top: 48px;
+  display:table;
+}
+
+.toy-factory {
+  border: solid 1px;
+  display: table-cell;
+
+  min-height:400px;
+  width: 280px;
+}

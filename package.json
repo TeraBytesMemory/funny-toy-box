@@ -1,0 +1,33 @@
+{
+  "name": "funny_toy_box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "materialize": "^1.0.0",
+    "jquery": "^2.2.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "jquery-ui": "^1.10.5",
+    "lodash": "^4.5.1"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeraBytesMemory/funny-toy-box.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "TeraBytesMemory",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeraBytesMemory/funny-toy-box/issues"
+  },
+  "homepage": "https://github.com/TeraBytesMemory/funny-toy-box#readme"
+}
