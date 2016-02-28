@@ -63,12 +63,12 @@
         $(".toy-factory").append(this.$dom);
 
 
-        if (box && x && y) {
+        if (box && x >= 0 && y >= 0) {
             var offset = $(".box").offset();
 
             this.$dom.css("position", "absolute");
             this.$dom.css("left", offset.left + x * 75);
-            this.$dom.css("top", offset.top + y * 75);
+            this.$dom.css("top", offset.top + (y + 1) * 75);
 
             box.findOverlapGrid(this.$dom);
         }

@@ -42,19 +42,11 @@
   width:600px;
   height:450px;
   min-height:450px;
-
-  display: table-cell;
 }
 
 .game {
   margin-top: 48px;
-  display:table;
 }
 
 .toy-factory {
-  border: solid 1px;
-  display: table-cell;
-
-  min-height:400px;
-  width: 280px;
 }

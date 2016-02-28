@@ -44,12 +44,16 @@
 
     module.prototype.scoring = function() {
         var toys = _.map(this.ary, function(v) {
-            _.map(this.w, function() {
-                v.value || null;
+            _.map(v, function(w) {
+                w.value || null;
             })
         })
         console.log(toys);
-        func()
+
+		// スコア計算追加部分
+		var Score = require('./score.js');
+		var score = new Score(toys);
+		return score.calc();
     };
 
     module.prototype.removeToy = function(id) {
@@ -95,7 +99,11 @@
         for (var i=0; i<grid.length; i++) {
             grid[i].insertToy(toy);
         }
- 
+
+        // scoring
+        var score = this.scoring();
+        $(".score").text(score);
+
         return grid;
     };
 
