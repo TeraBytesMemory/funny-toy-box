@@ -1,0 +1,106 @@
+html, body {
+  height: 100%;
+  max-height;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body {
+  background-image: url('../img/BG.png');
+  background-size: cover;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+footer.page-footer {
+  padding: 0px;
+}
+
+.toy {
+  margine: 0;
+  padding: 0;
+}
+/*
+.toy:after {
+  content: "↷";
+  color: black;
+  size: 32px;
+
+  position: absolute;
+  right:0;
+}
+*/
+
+.box-grid {
+  margin: 0;
+  padding: 0;
+  width:75px;
+  height:75px;
+  min-height:75px;
+  border: solid 1px #6d4c41;
+
+  display: table-cell;
+}
+
+.grid-line {
+  margin: 0;
+  padding: 0;
+  width:600px;
+  height:75px;
+  min-height:75px;
+
+  display: table;
+}
+
+.box {
+  margin: 0 auto;
+
+  padding: 0;
+  width:600px;
+  height:450px;
+  min-height:450px;
+
+  background-image: url('../img/box.png');
+}
+
+.game {
+  margin-top: 48px;
+}
+
+.toy-factory {
+}
+
+.score {
+  font-size: 36px;
+}
+
+#title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s;
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+#title>div {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  margin: -200px 0 0 -300px;
+}
+
+#title.active {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+}

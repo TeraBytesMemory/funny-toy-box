@@ -27,7 +27,7 @@
     module.prototype.rendar = function() {
         var self = this;
 
-        this.$dom = $("<div class='box-grid red lighten-3'></div>").droppable({
+        this.$dom = $("<div class='box-grid'></div>").droppable({
             "drop": function (event, ui) {
                 self.box.findOverlapGrid(ui.draggable);
 //                self.put($dom);

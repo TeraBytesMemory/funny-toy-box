@@ -37,7 +37,7 @@
 
         // sampling
         for(var i = 0; i < 7+n; i++) {
-            var toy = data[_.random(0, data.length - 1)];
+            var toy = _.cloneDeep(data[_.random(0, data.length - 1)]);
 
             var p = this.sampling_pos(toy);
             if (p) {
@@ -68,13 +68,13 @@
     };
 
     module.prototype.sampling_pos = function(toy) {
-        var x = _.random(0,5)
+        var x = _.random(0,5);
         var y = _.random(0,7);
         if (toy.w + x > 6 || toy.h + y > 8) return false;
 
         for(var i = x; i < toy.w + x; i++) {
             for(var j = y; j < toy.h + y; j++) {
-                if (this.isRendar[i][j]) return false;
+                if (this.isRendar[i][j] === true) return false;
 
                 this.isRendar[i][j] = true;
             }

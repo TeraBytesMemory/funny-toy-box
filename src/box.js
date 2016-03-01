@@ -44,10 +44,11 @@
 
     module.prototype.scoring = function() {
         var toys = _.map(this.ary, function(v) {
-            _.map(v, function(w) {
-                w.value || null;
+            return _.map(v, function(w) {
+                return w.value() || null;
             })
         })
+        console.log("scoring");
         console.log(toys);
 
 		// スコア計算追加部分
@@ -102,6 +103,7 @@
 
         // scoring
         var score = this.scoring();
+        console.log(score);
         $(".score").text(score);
 
         return grid;

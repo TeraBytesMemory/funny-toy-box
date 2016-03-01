@@ -29,6 +29,8 @@
         this.image = image;
         this.style = style;
 
+        this.checked = false;
+
         this.deg = 0;
     };
 
@@ -66,9 +68,13 @@
         if (box && x >= 0 && y >= 0) {
             var offset = $(".box").offset();
 
+            console.log("initial rendar");
+            console.log(offset.left);
+            console.log(offset.top);
+
             this.$dom.css("position", "absolute");
             this.$dom.css("left", offset.left + x * 75);
-            this.$dom.css("top", offset.top + (y + 1) * 75);
+            this.$dom.css("top", offset.top + y * 75);
 
             box.findOverlapGrid(this.$dom);
         }
